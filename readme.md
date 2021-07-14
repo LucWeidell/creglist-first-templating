@@ -1,4 +1,4 @@
-templatesDay3
+Creglist First Template
 ============
 
 ### Get Started
@@ -14,7 +14,7 @@ templatesDay3
 Fill in your AuthConfig with keys from [Auth0](https://auth0.com/)
 
 ```javascript
-export const domain = '' 
-export const clientId = '' 
-export const audience = '' 
+export const domain = ''
+export const clientId = ''
+export const audience = ''
 ```
