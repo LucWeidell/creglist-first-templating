@@ -6,13 +6,13 @@ export default class Car {
    *
    * @param {*} Car representation
    */
-  constructor({make, model, year, price, description , imgURL}){
+  constructor({make, model, year, price, description , imgURL = '//placebeard.it/300x300'}){
     this.make = make;
     this.model = model;
     this.year = year;
     this.price = price;
-    this.description = description = 'no description';
-    this.imgURl = imgURL || '//placebeard.it/300x300';
+    this.description = description || 'no description';
+    this.imgUrl = imgURL
   }
 
    /**

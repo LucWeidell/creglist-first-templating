@@ -23,52 +23,99 @@
     </header>
     <main class="container">
         <div class = "row">
-            <div class="col-md-5"></div>
+            <div class="col mt-5">
             <!-- b4-form-inline -->
-            <form class = "d-flex" onsubmit="app.carsController.createCar()">
-                <div class="form-group">
-                    <label for="make">Make</label>
-                    <input type="text" name="make" id="" class="form-control"
-                    placeholder="MAke ..." required>
-                </div>
-                <div class="form-group">
-                    <label for="model">Model</label>
-                    <input type="text" name="model" id="" class="form-control"
-                    placeholder="Model ..." required>
-                </div>
-                <div class="form-group">
-                    <label for="year">Year</label>
-                    <input type="number" name="year" id="" class="form-control"
-                    placeholder="Year ..." required min="1950" max="2021">
-                </div>
-                <div class="form-group">
-                    <label for="price">Price</label>
-                    <input type="number" name="price" id="" class="form-control"
-                    placeholder="Price ..." required min="1">
-                </div>
-                <div class="form-group">
-                    <label for="imgURL">ImgURL</label>
-                    <input type="text" name="imgUrl" id="" class="form-control"
-                    placeholder="ImgURL ...">
-                </div>
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <input type="text" name="description" id="" class="form-control"
-                    placeholder="Description ..." required maxlength="240">
-                </div>
-                <div class="d-flex align-items-center">
-                <button type ="submit" class="btn btn-outline-success">Add Car</button>
+            <!-- NOTE form car -->
+                <form class = "d-flex" onsubmit="app.carsController.createCar()">
+                    <div class="form-group">
+                        <label for="make">Make</label>
+                        <input type="text" name="make" id="" class="form-control"
+                        placeholder="MAke ..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" name="model" id="" class="form-control"
+                        placeholder="Model ..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="number" name="year" id="" class="form-control"
+                        placeholder="Year ..." required min="1950" max="2021">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" name="price" id="" class="form-control"
+                        placeholder="Price ..." required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="imgURL">ImgURL</label>
+                        <input type="text" name="imgUrl" id="" class="form-control"
+                        placeholder="ImgURL ...">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="" class="form-control"
+                        placeholder="Description ..." required maxlength="240">
+                    </div>
+                    <div class="d-flex align-items-center">
+                    <button type ="submit" class="btn btn-outline-success">Add Car</button>
+                    </div>
+                </form>
             </div>
-            </form>
         </div>
+        <!-- NOTE car Places -->
         <div class="row" id="cars">
             <div class=" col-md-3 col-sm-2">
-                <div class="car bg-ligh shadow">
+                <div class="car bg-light shadow">
                     <img src="//placebeard.it/200x200" class = w-100 alt="car">
                     <div class = "p-3">
                         <p><b>YEAR - MAKE - MODEL</b></p>
                         <p>Description</p>
                         <p><i>Price</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Houses:</h3>
+            </div>
+        </div>
+        <!-- NOTE House Form -->
+
+        <!-- NOTE houses Places -->
+        <div class="row" id="houses">
+            <div class=" col-md-4 col-sm-3">
+                <div class="car bg-light shadow">
+                    <img src="//placebeard.it/300x300" class = w-100 alt="house">
+                    <div class = "p-3">
+                        <p><b>Floor- SquareFt - Year</b></p>
+                        <p>bath</p>
+                        <p>description</p>
+                        <h5><i>Price</i></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Jobs:</h3>
+            </div>
+        </div>
+
+        <!-- NOTE Jobs Form -->
+
+        <!-- NOTE jobs Placed -->
+        <div class="row" id="jobs">
+            <div class=" col-md-3 col-sm-2">
+                <div class="car bg-light shadow">
+                    <img src="//placebeard.it/200x200" class = w-100 alt="car">
+                    <div class = "p-3">
+                        <h4>Position - City</h4>
+                        <p><b>Salary - HrWeek</b></p>
+                        <p>Description - Overtime</p>
+                        <p><i>Overtime</i></p>
                     </div>
                 </div>
             </div>
