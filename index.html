@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <title>templatesDay3</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light navbar-expand bg-secondary text-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
+                <span class="ml-2">LucsList</span>
+            </a>
+        </nav>
+    </header>
+    <main class="container">
+        <div class = "row">
+            <div class="col-md-5"></div>
+            <!-- b4-form-inline -->
+            <form class = "d-flex" onsubmit="app.carsController.createCar()">
+                <div class="form-group">
+                    <label for="make">Make</label>
+                    <input type="text" name="make" id="" class="form-control"
+                    placeholder="MAke ..." required>
+                </div>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <input type="text" name="model" id="" class="form-control"
+                    placeholder="Model ..." required>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <input type="number" name="year" id="" class="form-control"
+                    placeholder="Year ..." required min="1950" max="2021">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number" name="price" id="" class="form-control"
+                    placeholder="Price ..." required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="imgURL">ImgURL</label>
+                    <input type="text" name="imgUrl" id="" class="form-control"
+                    placeholder="ImgURL ...">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" name="description" id="" class="form-control"
+                    placeholder="Description ..." required maxlength="240">
+                </div>
+                <div class="d-flex align-items-center">
+                <button type ="submit" class="btn btn-outline-success">Add Car</button>
+            </div>
+            </form>
+        </div>
+        <div class="row" id="cars">
+            <div class=" col-md-3 col-sm-2">
+                <div class="car bg-ligh shadow">
+                    <img src="//placebeard.it/200x200" class = w-100 alt="car">
+                    <div class = "p-3">
+                        <p><b>YEAR - MAKE - MODEL</b></p>
+                        <p>Description</p>
+                        <p><i>Price</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-light">
+        <div class="text-center">
+            <p><small>Made with love by Codeworks</small></p>
+        </div>
+    </footer>
+
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
