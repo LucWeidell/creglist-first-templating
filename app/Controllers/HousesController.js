@@ -1,7 +1,7 @@
 import { ProxyState } from "../AppState.js";
 
 
-_draw(){
+function _draw(){
   template = ''
   let houses = ProxyState.houses
   houses.forEach(house => {
