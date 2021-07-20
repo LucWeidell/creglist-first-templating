@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState.js"
+import Car from "../Models/Car.js"
 import { carsService } from "../Services/CarsService.js"
 
 
@@ -17,7 +18,12 @@ export default class CarsController {
     //When cars changes in the ProxyState, run teh draw method
     ProxyState.on('cars', _draw)
     _draw()
+
+    this.getAllCars()
+
   }
+
+
 
   createCar(){
     event.preventDefault()
@@ -43,5 +49,16 @@ export default class CarsController {
     carsService.createCar(rawCar)
     form.reset()
     _draw()
+  }
+
+  deleteCar(id){
+    if(window.confirm("Delete this" + id)){
+      carsService.deleteCar(id)
+    }
+  }
+  bidCar(id){
+    if(window.confirm("Delete this" + id)){
+      carsService.bidCar(id)
+    }
   }
 }

@@ -6,8 +6,9 @@ export default class Car {
    *
    * @param {*} Car representation
    */
-  constructor({make, model, year, price, description , imgURL = '//placebeard.it/300x300'}){
+  constructor({make, model, year, price, description, id , imgURL = '//placebeard.it/300x300'}){
     this.make = make;
+    this.id = id
     this.model = model;
     this.year = year;
     this.price = price;
@@ -39,7 +40,9 @@ export default class Car {
           <p><b>${this.year} - ${this.make} - ${this.model}</b></p>
           <p>${this.description}</p>
           <p><i>${this.price}</i></p>
-        </div>
+          <button type="button" class="btn btn-secondary" onclick="app.carsController.bidCar('${this.id}')">delete</button>
+          <button type="button" class="btn btn-danger" onclick="app.carsController.deleteCar('${this.id}')">delete</button>
+          </div>
       </div>
     </div>
     `
