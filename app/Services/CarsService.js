@@ -30,7 +30,7 @@ class CarsService {
       console.log(res.data)
       ProxyState.cars = ProxyState.cars.filter(c => c.id != carId)
       //NOTE this also works just slower calling server
-      //this.getAllCars()
+      //ProxyState.cars = this.getAllCars()
     } catch (error){
       console.error(error)
     }
@@ -41,8 +41,8 @@ class CarsService {
     //res = responce from api
     //NOTE if not awaited the res returns the promise =
     const res = await api.get('cars')
-    console.log(res.data)
     ProxyState.cars = res.data.map(c => new Car(c))
+
     } catch (error) {
       console.error(error)
     }
@@ -52,7 +52,11 @@ class CarsService {
   async bidCar(carId){
     try{
       console.log('Bid Car:', carId)
-      let foundCar= ProxyState.cars.filter(c => c.id != carId)
+      foundCar.price+=100
+      const res = await api.put('cars/'+ carId, foundCar)
+      console.log('updated car',res.data)
+      ProxyState.cars = ProxyState.cars
+
       //NOTE this also works just slower calling server
       //this.getAllCars()
     } catch (error){
